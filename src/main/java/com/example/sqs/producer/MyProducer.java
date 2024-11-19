@@ -15,7 +15,7 @@ public class MyProducer {
 
     @PostMapping
     public ResponseEntity<String> sendMessage(@RequestBody String message) {
-        var SQS = "https://sqs.us-east-1.amazonaws.com/214933884761/minha-fila";
+        var SQS = "https://sqs.us-east-1.amazonaws.com/214933884761/pagamentos";
         sqsTemplate.send(SQS, message);
         return ResponseEntity.ok("Message sent to SQS successfully!");
     }
