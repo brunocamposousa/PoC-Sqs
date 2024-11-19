@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyConsumer {
 
-    @SqsListener("minha-fila")
+    @SqsListener("pagamentos")
     public void listen(String message) {
         System.out.println("Message received: " + message);
     }
